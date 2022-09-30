@@ -4,22 +4,27 @@ console.log(sketchContainer)
 const resetButton = document.querySelector(".reset-button");
 const gridButton = document.querySelector(".grid-button");
 
-
+let passes = 0;
+let rainbow = ["red", "orange", "yellow", "green", "lime", "aqua", "blue", "indigo", "violet", "black"]
 
 
 
 
 //changes the color of all the div (so basically lets you draw)
 function changeProperties(e) {
-    e.target.style.backgroundColor = "black";
+    e.target.style.backgroundColor = rainbow[passes]
+
+    passes++;
+
+    if (passes == 10) {
+        passes = 0;
+    }
 }
 
 function resetSquareGrid(e) {
     let squares = document.querySelectorAll(".draw-div")
 
     let answer = prompt("Please enter the grid size you want? The max is 100x.", 16)
-
-    console.log(answer, typeof(Number(answer)))
 
     if (answer > 100 || answer < 0 || isNaN(answer) == true) {
         console.log("ERROR, USER PUT IN A WRONG VALUE");
