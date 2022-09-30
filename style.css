@@ -21,7 +21,6 @@ body {
     align-items: center;
     justify-content: start;
     height: 80vh;
-    background-color: aqua;
 }
 
 .sketch-container {
@@ -38,5 +37,16 @@ body {
 .control-container {
     height: 100px;
     width: 600px;
-    background-color: beige;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.control-buttons {
+    background-color: royalblue;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 0px;
 }
